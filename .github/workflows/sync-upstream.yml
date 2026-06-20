@@ -18,8 +18,11 @@ jobs:
         run: |
           # 默认模式：无冲突自动合并，有冲突直接失败通知，不会覆盖你的改动
           gh repo sync ${{ github.repository }} \
-            --source tgymnich/fork-sync:master \ # [需改] 上游仓库格式：所有者/仓库名:上游分支名
-            -b master \ # [需改] 你的仓库要同步的目标分支名
-            --force # [可选 慎用] 取消注释开启强制模式：上游代码直接覆盖你本地的所有改动，会丢失你自己写的内容
+            # [需改] 上游仓库格式：所有者/仓库名:上游分支名
+            --source tgymnich/fork-sync:master \
+            # [需改] 你的仓库要同步的目标分支名
+            -b master \
+            # [可选 慎用] 取消注释开启强制模式：上游代码直接覆盖你本地的所有改动，会丢失你自己写的内容
+            --force
 
 # 进入你的仓库 → 「Settings」→ 左侧「Actions」→「General」→ 找到「Workflow permissions」→ 选择「Read and write permissions」→ 保存即可
