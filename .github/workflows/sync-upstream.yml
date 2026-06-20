@@ -30,7 +30,8 @@ jobs:
           git remote add upstream https://github.com/tgymnich/fork-sync.git
           git fetch upstream
           # 快进合并：没有冲突自动合并，有冲突直接失败通知你，不会覆盖你的修改
-          git merge upstream/main --no-edit --ff-only
+          # 如果你自己的仓库默认分支是master，把这里改成master即可
+          git merge upstream/master --no-edit --ff-only
 
       - name: 推送到你自己的仓库
         run: |
