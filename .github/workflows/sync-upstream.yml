@@ -23,6 +23,6 @@ jobs:
           # --branch 指定源仓库与目标仓库中要同步的同名分支
           # --force 会将目标分支硬重置为源分支状态；目标分支的独有提交可能丢失
           # gh repo sync "${{ github.repository }}" --source "tgymnich/fork-sync" --branch "main" --force
-          gh repo sync "${{ github.repository }}" --source "tgymnich/fork-sync" --branch "main"
+          gh repo sync "${{ github.repository }}" --source "tgymnich/fork-sync" --branch "master"
 
 # 权限说明：工作流已按最小权限原则声明 contents: write，通常无需再依赖仓库默认的“读取和写入权限”设置；但组织或企业策略、分支保护规则或规则集仍可能阻止写入或强制更新。工作流文件应保存到仓库的 .github/workflows/ 目录，并使用 .yml 或 .yaml 扩展名。
